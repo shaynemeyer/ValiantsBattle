@@ -70,6 +70,9 @@
                                     <constraint firstAttribute="width" constant="114" id="klP-bT-4Pe"/>
                                 </constraints>
                                 <state key="normal" title="ATTACK" image="player2attackbtn"/>
+                                <connections>
+                                    <action selector="playerAttackBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A3M-Ke-wqa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cW-q8-9TR">
                                 <rect key="frame" x="435" y="56" width="84" height="25"/>
@@ -84,6 +87,9 @@
                                     <constraint firstAttribute="height" constant="51" id="yvy-8A-G8P"/>
                                 </constraints>
                                 <state key="normal" title="ATTACK" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="enemyAttackBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Idh-Ae-AIQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VE3-hX-WPw">
                                 <rect key="frame" x="63" y="58" width="114" height="21"/>
@@ -121,6 +127,9 @@
                             <constraint firstItem="VE3-hX-WPw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="85" id="zXj-W6-MKe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="printLbl" destination="wGb-Ft-Sls" id="v2T-eq-7H0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

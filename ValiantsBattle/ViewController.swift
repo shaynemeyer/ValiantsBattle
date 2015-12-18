@@ -9,16 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+
+    @IBOutlet weak var printLbl: UILabel!
+    
     
     var player: Player!
     var enemy: Enemy!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func playerAttackBtnTapped(sender: AnyObject) {
+        
+    }
+    
 
+    @IBAction func enemyAttackBtnTapped(sender: AnyObject) {
+        
+    }
 }
 
