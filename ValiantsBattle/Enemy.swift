@@ -1,5 +1,5 @@
 //
-//  Player.swift
+//  Enemy.swift
 //  ValiantsBattle
 //
 //  Created by Shayne on 12/18/15.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Player: Character {
+class Enemy: Character {
     
-    private var _name = "Player"
+    private var _name = "Enemy"
     
     var name: String {
         get {
