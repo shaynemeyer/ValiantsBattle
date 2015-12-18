@@ -11,6 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var printLbl: UILabel!
+    @IBOutlet weak var enemyHpLbl: UILabel!
+    @IBOutlet weak var playerHpLbl: UILabel!
+    
+    @IBOutlet weak var enemyAttackBtn: UIButton!
+    @IBOutlet weak var playerAttackBtn: UIButton!
     
     
     var player: Player!
@@ -18,16 +23,39 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        player = Player(name: "Johnny Valiant", hp: 110, attackPwr: 20)
+        playerHpLbl.text = "\(player.hp) HP"
+        
+        enemy = Enemy(name: "Billy Bad Guy", hp: 111, attackPwr: 20)
+        enemyHpLbl.text = "\(enemy.hp) HP"
     }
 
     @IBAction func playerAttackBtnTapped(sender: AnyObject) {
         
+        self.playerAttackBtn.enabled = false
+        
+        // wait 3 seconds then re-enable
+        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "disablePlayerAttackButton", userInfo: nil, repeats: false)
+
     }
     
 
-    @IBAction func enemyAttackBtnTapped(sender: AnyObject) {
+    @IBAction func enemyAttackBtnTapped(sender: UIButton) {
         
+        self.enemyAttackBtn.enabled = false
+        
+        // wait 3 seconds then re-enable
+        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "disableEnemyAttackButton", userInfo: nil, repeats: false)
+
+    }
+    
+    func disableEnemyAttackButton() {
+        self.enemyAttackBtn.enabled = true
+    }
+    
+    func disablePlayerAttackButton() {
+        self.playerAttackBtn.enabled = true
     }
 }
 
